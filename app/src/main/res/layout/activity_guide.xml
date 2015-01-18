@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.loman.david.guessnumber.GuideActivity">
+
+    <Button
+        android:id="@+id/playClassicButton"
+        android:text="经典模式"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/settingButton"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:onClick="playClassicGame"
+        />
+
+    <Button
+        android:id="@+id/playButton"
+        android:text="聚会模式"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playClassicButton"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:onClick="playGame" />
+
+    <Button
+        android:id="@+id/settingButton"
+        android:text="设  置"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:onClick="setSetting" />
+
+    <Button
+        android:id="@+id/helpButton"
+        android:text="帮  助"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingButton"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:text="退  出"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/helpButton"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:onClick="onExit" />
+
+</RelativeLayout>
