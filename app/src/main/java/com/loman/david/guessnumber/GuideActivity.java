@@ -25,7 +25,8 @@ public class GuideActivity extends ActionBarActivity {
     }
 
     public void playClassicGame(View view){
-
+        Intent intent=new Intent(GuideActivity.this,ClassicGameActivity.class);
+        startActivity(intent);
     }
 
     public void setSetting(View view){
@@ -53,7 +54,6 @@ public class GuideActivity extends ActionBarActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_exit) {
             this.finish();
-            return true;
         }
 
         return super.onOptionsItemSelected(item);

@@ -26,6 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ClassicGameActivity"
+            android:label="@string/title_activity_classic_game"
+            android:parentActivityName=".GuideActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.loman.david.guessnumber.GuideActivity" />
+        </activity>
     </application>
 
 </manifest>

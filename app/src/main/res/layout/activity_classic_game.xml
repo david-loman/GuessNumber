@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.loman.david.guessnumber.ClassicGameActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffff0000" />
+
+        <TextView
+            android:id="@+id/guessTextView"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32dp"
+            android:gravity="center"
+            android:layout_margin="2dp"
+            android:clickable="true"
+            android:onClick="initGame" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/gameLayout"
+            android:gravity="center_horizontal"
+            android:longClickable="true"
+            android:textSize="24dp"
+            android:scrollbars="vertical"
+            android:layout_margin="2dp" />
+
+
+        <LinearLayout
+            android:id="@+id/gameLayout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/classicStartButton"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_margin="2dp"
+                android:text="猜一下"
+                android:onClick="startGame" />
+
+            <Button
+                android:id="@+id/classicStopButton"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_margin="2dp"
+                android:text="结束"
+                android:onClick="stopGame" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

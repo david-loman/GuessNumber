@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:clickable="true"
         android:text="来一局"
-        android:onClick="startGame"
-        android:longClickable="true" />
+        android:onClick="startGame" />
 
     <TextView
         android:id="@+id/errorTextView"
