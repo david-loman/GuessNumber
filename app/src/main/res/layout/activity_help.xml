@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.loman.david.guessnumber.HelpActivity">
+
+    <RelativeLayout
+        android:background="@color/link_text_material_dark"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/contentTextView"
+            android:text="游戏简介"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_below="@+id/contentTextView"
+            android:id="@+id/detailContentTextView"
+            android:text="聚会模式
+该模式通过给定一个区间来猜数字。由于与饭桌上的猜数字游戏规则一样，所以称为聚会模式。
+
+经典模式
+系统随机生成4个互不相同的数字，玩家需要通过每次的反馈来推理正确的数字。"
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:background="@color/link_text_material_dark"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="游戏规则"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_margin="2dp"
+            android:id="@+id/ruleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="聚会模式
+游戏开始后会给定一个区间，玩家可以猜本区间内的任何数，如果正好是目标数则玩家获胜，否则区间会相应变小。
+
+经典模式
+玩家每次需要输入4个数，而后系统对这四个数作出判断。A代表目标数中存在且位置正确，B代表目标数中存在，但位置不正确。"
+            android:layout_margin="2dp"
+            android:layout_below="@+id/ruleTextView"
+            android:id="@+id/detailRuleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:background="@color/link_text_material_dark"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_margin="2dp"
+            android:text="游戏玩法"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:id="@+id/playTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_margin="2dp"
+            android:text="1.进入游戏后，玩家可以通过点击“来一局”来进行游戏与开始新一局游戏。
+2.通过点击“猜一下”来进行竞猜。
+3.通过点击“结束”来结束该局游戏，查看正确答案。"
+            android:layout_below="@+id/playTextView"
+            android:id="@+id/detailPlayTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+</LinearLayout>

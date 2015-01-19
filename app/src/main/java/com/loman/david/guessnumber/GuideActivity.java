@@ -8,15 +8,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 
+import java.util.Vector;
+
 
 public class GuideActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide);
-
     }
 
     public void playGame(View view){
@@ -29,33 +29,21 @@ public class GuideActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
-    public void setSetting(View view){
+    public void sendShare(View view){
+        Intent sendIntent =new Intent(Intent.ACTION_SEND);
+        sendIntent.setType("text/plain");
+        sendIntent.putExtra(Intent.EXTRA_SUBJECT, "分享");
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "语音猜数字，你还在等什么!应用下载：http://davidloman.net/project/GuessNumber/");
+        startActivity(Intent.createChooser(sendIntent, "分享给我的朋友"));
+    }
 
+    public void getHelp (View view){
+        Intent intent =new Intent(this,HelpActivity.class);
+        startActivity(intent);
     }
 
     public void onExit(View view){
         this.finish();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_guide, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_exit) {
-            this.finish();
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

@@ -27,14 +27,14 @@
 
     <Button
         android:id="@+id/settingButton"
-        android:text="设  置"
+        android:text="分  享"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
         android:padding="5dp"
-        android:onClick="setSetting" />
+        android:onClick="sendShare" />
 
     <Button
         android:id="@+id/helpButton"
@@ -44,6 +44,7 @@
         android:layout_below="@+id/settingButton"
         android:background="@android:color/transparent"
         android:padding="5dp"
+        android:onClick="getHelp"
         />
 
     <Button
